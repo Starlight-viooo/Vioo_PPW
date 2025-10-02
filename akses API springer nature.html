@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -397,16 +397,14 @@ Penambangan web bertujuan untuk menemukan pola-pola berguna atau  pengetahuan da
 <p>Kali ini, saya akan melakukan web crawling/ web ining terhadap web sprynger</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sprynger</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sprynger</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting sprynger
   Downloading sprynger-0.4.1-py3-none-any.whl.metadata (5.8 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: lxml in /usr/local/lib/python3.12/dist-packages (from sprynger) (5.4.0)
+Requirement already satisfied: lxml in /usr/local/lib/python3.12/dist-packages (from sprynger) (5.4.0)
 Requirement already satisfied: requests in /usr/local/lib/python3.12/dist-packages (from sprynger) (2.32.4)
 Requirement already satisfied: urllib3 in /usr/local/lib/python3.12/dist-packages (from sprynger) (2.5.0)
 Requirement already satisfied: platformdirs in /usr/local/lib/python3.12/dist-packages (from sprynger) (4.3.8)
@@ -415,15 +413,8 @@ Requirement already satisfied: idna&lt;4,&gt;=2.5 in /usr/local/lib/python3.12/d
 Requirement already satisfied: certifi&gt;=2017.4.17 in /usr/local/lib/python3.12/dist-packages (from requests-&gt;sprynger) (2025.8.3)
 Downloading sprynger-0.4.1-py3-none-any.whl (40 kB)
 ?25l   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">0.0/40.2 kB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
-   ━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">20.5/40.2 kB</span> <span class=" -Color -Color-Red">891.7 kB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━ <span class=" -Color -Color-Green">30.7/40.2 kB</span> <span class=" -Color -Color-Red">293.5 kB/s</span> eta <span class=" -Color -Color-Cyan">0:00:01</span>
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">40.2/40.2 kB</span> <span class=" -Color -Color-Red">322.8 kB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25h
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: sprynger
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">40.2/40.2 kB</span> <span class=" -Color -Color-Red">1.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hInstalling collected packages: sprynger
 Successfully installed sprynger-0.4.1
 </pre></div>
 </div>
@@ -444,7 +435,7 @@ Kode di bawah ini akan melakukan crawling terhadap semua judul buku yang ada</p>
 <p>Kode di bawah ini akan melakukan crawling terhadap semua judul buku yang ada</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
 <span class="c1"># Silahkan membuat api key dari https://dev.springernature.com/#api</span>
 
 <span class="n">api_key</span> <span class="o">=</span> <span class="s2">&quot;6acc2c2752159536019850ef184ce740&quot;</span>
@@ -524,7 +515,7 @@ Abstract: We analyze the theory of rational trees with finitely many constructor
 <p>lalu kita memasukkan keyword ke dalam parameter respon API webscrapper, berbeda dengan parameter kode sebelum nya yang memasukkan ISBN</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
 
 
@@ -601,35 +592,23 @@ Abstract: We analyze the theory of rational trees with finitely many constructor
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Memulai proses crawling...
 
- Mencari untuk kata kunci: &#39;web mining&#39;
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ditemukan 437 hasil. Mengambil 10 data pertama.
+🔎 Mencari untuk kata kunci: &#39;web mining&#39;
+✅ Ditemukan 437 hasil. Mengambil 10 data pertama.
 
- Mencari untuk kata kunci: &#39;web usage mining&#39;
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ditemukan 198 hasil. Mengambil 10 data pertama.
+🔎 Mencari untuk kata kunci: &#39;web usage mining&#39;
+✅ Ditemukan 198 hasil. Mengambil 10 data pertama.
 
- Mencari untuk kata kunci: &#39;text mining&#39;
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ditemukan 3593 hasil. Mengambil 10 data pertama.
+🔎 Mencari untuk kata kunci: &#39;text mining&#39;
+✅ Ditemukan 3593 hasil. Mengambil 10 data pertama.
 
- Mencari untuk kata kunci: &#39;sentiment analysis&#39;
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ditemukan 6591 hasil. Mengambil 10 data pertama.
+🔎 Mencari untuk kata kunci: &#39;sentiment analysis&#39;
+✅ Ditemukan 6591 hasil. Mengambil 10 data pertama.
 
- Mencari untuk kata kunci: &#39;web structure mining&#39;
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ditemukan 20 hasil. Mengambil 10 data pertama.
+🔎 Mencari untuk kata kunci: &#39;web structure mining&#39;
+✅ Ditemukan 20 hasil. Mengambil 10 data pertama.
 
- Menyimpan total 50 data ke file &#39;springer_nature_results.csv&#39;...
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> Proses selesai! File &#39;springer_nature_results.csv&#39; berhasil dibuat.
+💾 Menyimpan total 50 data ke file &#39;springer_nature_results.csv&#39;...
+🚀 Proses selesai! File &#39;springer_nature_results.csv&#39; berhasil dibuat.
 </pre></div>
 </div>
 </div>
