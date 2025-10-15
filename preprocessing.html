@@ -60,6 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'preprocessing';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Klasifikasi topik dengan LDA" href="word_embedd_lda.html" />
     <link rel="prev" title="Crawling PTA &amp; Berita" href="Crawling_PTA2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -183,6 +184,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Crawling_PTA2.html">Crawling PTA &amp; Berita</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Preprocessing,TF-IDF dan Word Embedding</a></li>
 
+<li class="toctree-l1"><a class="reference internal" href="word_embedd_lda.html">Klasifikasi topik dengan LDA</a></li>
 </ul>
 
     </div>
@@ -1294,9 +1296,7 @@ Successfully installed gensim-4.3.3 numpy-1.26.4 scipy-1.13.1
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== Proses Pelatihan Word Embedding (Word2Vec) ===&quot;</span><span class="p">)</span>
 
     <span class="c1"># --- 3. Melatih Model Word2Vec ---</span>
-    <span class="c1"># vector_size: dimensi vektor untuk setiap kata</span>
-    <span class="c1"># window: ukuran jendela konteks (kata-kata tetangga)</span>
-    <span class="c1"># min_count: abaikan kata yang muncul kurang dari nilai ini</span>
+
     <span class="n">word2vec_model</span> <span class="o">=</span> <span class="n">Word2Vec</span><span class="p">(</span><span class="n">sentences</span><span class="o">=</span><span class="n">sentences</span><span class="p">,</span> <span class="n">vector_size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">window</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">min_count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">workers</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Model Word2Vec berhasil dilatih.&quot;</span><span class="p">)</span>
 
@@ -1773,6 +1773,15 @@ Successfully installed gensim-4.3.3 numpy-1.26.4 scipy-1.13.1
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Crawling PTA &amp; Berita</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="word_embedd_lda.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Klasifikasi topik dengan LDA</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
